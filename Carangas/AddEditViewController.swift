@@ -32,8 +32,7 @@ class AddEditViewController: UIViewController {
             btAddEdit.setTitle("Alterar carro", for: .normal)
         }
     }
-    
-    // MARK: - IBActions
+
     @IBAction func addEdit(_ sender: UIButton) {
         if car == nil {
             car = Car()
@@ -51,15 +50,12 @@ class AddEditViewController: UIViewController {
             Rest.update(car: car) { (sucess) in
                 self.goBack()
             }
-        
         }
     }
     
-    //MARK: - Methods
     func goBack() {
         DispatchQueue.main.async {
             self.navigationController?.popViewController(animated: true)
         }
-        
     }
 }

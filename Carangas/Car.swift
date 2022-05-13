@@ -27,5 +27,8 @@ class Car: Codable {
         }
     }
     
+    struct Brand: Codable {
+        let name: String
+    }
 }
 
